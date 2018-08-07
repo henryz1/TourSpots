@@ -7,10 +7,14 @@ var express     = require("express"),
     LocalStrategy = require("passport-local"),
     methodOverride = require("method-override"),
     passportLocalMongoose = require("passport-local-mongoose"),
+    moment = require("moment"),
     Campground  = require("./models/campground"),
     Comment     = require("./models/comment"),
     User        = require("./models/user"),
     seedDB      = require("./seeds");
+
+
+app.locals.moment = require("moment");
     
 // requiring routes
 var commentRoutes     = require("./routes/comments"),
